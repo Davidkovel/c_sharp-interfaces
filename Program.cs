@@ -9,7 +9,8 @@ public interface ICalc
 
 public interface IOutput2
 {
-
+    void ShowEven();
+    void ShowOdd();
 }
 public abstract class BaseArray : IOutput2, ICalc
 {
