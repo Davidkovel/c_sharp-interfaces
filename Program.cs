@@ -1,5 +1,4 @@
 ﻿using System;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 namespace InheritanceApp;
 
 public interface ICalc
@@ -14,7 +13,7 @@ public interface IOutput2
 }
 public abstract class BaseArray : IOutput2, ICalc
 {
-    protected int[] arr; // Массив доступен в наследниках
+    protected int[] arr;
 
     public BaseArray(int[] arr)
     {
@@ -93,6 +92,7 @@ class Program
         int[] data = { 1, 2, 3, 4, 5 };
         BaseArray customArray = new CustomArray(data); // L SOLID
 
+        Console.WriteLine("Result: ");
         customArray.ShowEven();
         customArray.ShowOdd();
 
@@ -101,9 +101,10 @@ class Program
 }
 
 /*
+Result:
 Even numbers of array: 2 4
 Odd numbers of array: 1 3 5
 
-C:\Users\David\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\net8.0\ConsoleApp1.exe (process 6196) exited with code 0 (0x0).
+C:\Users\David\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\net8.0\ConsoleApp1.exe (process 8132) exited with code 0 (0x0).
 Press any key to close this window . . .
 */
